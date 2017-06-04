@@ -1,0 +1,39 @@
+# Site settings
+title: Ondřej Bína
+description: 'Open source? Oh yes please!'
+url: 'http://binao.cz'
+baseurl: '/'
+# google_analytics: 'UA-XXXXXX-X'
+# disqus_shortname: 'your-disqus-name'
+
+author:
+  name: 'Ondřej Bína'
+  email: binao@seznam.cz
+  twitter_username: binaondr
+  facebook_username: binaondr
+  github_username:  binao
+  linkedin_username: binao
+
+defaults:
+  -
+    scope:
+      path: ''
+      type: 'posts'
+    values:
+        layout: 'post'
+
+# Build settings
+destination: _site
+paginate: 10
+permalink: /:year/:title/
+markdown: kramdown
+highlighter: rouge
+
+kramdown:
+  # use Github Flavored Markdown
+  input: GFM
+  # do not replace newlines by <br>s
+  hard_wrap: false
+
+gems: ['jekyll-paginate']
+exclude: ['README.md', 'Gemfile', 'Gemfile.lock']
